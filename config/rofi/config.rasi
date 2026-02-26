@@ -1,0 +1,44 @@
+configuration {
+	modes: "drun,run";
+	font: "GoogleSans SemiBold 13";
+	show-icons: false;
+	location: 0;
+	drun-display-format: "{name}";
+	display-window:"";
+	display-run:"  ";
+	display-ssh: " ";
+	display-drun:" ";
+  timeout {
+      action: "kb-cancel";
+      delay:  0;
+  }
+  filebrowser {
+      directories-first: true;
+      sorting-method:    "name";
+  }
+}
+@import "/home/lzka/.cache/wal/colors-rofi-dark.rasi"
+entry {
+	corsor-width: 8px;
+	placeholder: "search...";
+}
+element, element-text {
+	spacing: 5px;
+	border-radius: 8px;
+	vertical-align: 0.5;
+	children: [element-icon, element-text];
+	oreintation: horizontal;
+}
+element-icon{
+	size: 25px;
+	padding: 8px;
+}
+window{
+	width: 35%;
+	height:15%;
+	border-radius: 13px;
+}
+listview {
+	columns: 1;
+	margin:20 0 0 0px;
+}

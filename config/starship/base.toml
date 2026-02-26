@@ -1,0 +1,89 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+palette = "wal"
+
+format = """
+[ ](fg:color1)\
+$os\
+$username\
+[](bg:color2 fg:color1)\
+$directory\
+[](bg:color3 fg:color2)\
+$git_branch\
+$git_status\
+[](bg:color1 fg:color2)\
+$time\
+[](fg:color3)\
+$fill\
+[](fg:color4)\
+$status\
+[](bg:color4 fg:color5)\
+$cmd_duration\
+[ ](fg:color5)\
+$line_break\
+$line_break\
+$character\
+"""
+
+[username]
+show_always = true
+style_user = ""
+style_root = ""
+format = '[ 󰣇 $user ]($style bg:color1 fg:foreground)'
+disabled = false
+
+[os]
+style = ""
+disabled = true
+
+[directory]
+style = ""
+format = "[ $path ]($style bg:color2 fg:foreground)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[git_branch]
+symbol = ""
+style = ""
+format = '[ $symbol $branch ]($style bg:color7 fg:foreground)'
+
+[git_status]
+style = ""
+format = '[$all_status$ahead_behind ]($style bg:color6 fg:foreground)'
+
+[time]
+disabled = false
+time_format = "%R:%S"
+style = ""
+format = '[ $time ]($style bg:color3 fg:foreground)'
+
+[fill]
+symbol = " "
+
+[status]
+disabled = false
+format = "[ $symbol$signal_name$status ]($style bg:color4)"
+style = "bold bg:color4 fg:foreground"
+failure_style = "bold bg:background fg:foreground"
+map_symbol = true
+symbol = "❌"
+success_symbol = " "
+sigint_symbol = "⚡"
+signal_symbol = "⚡"
+
+[cmd_duration]
+format = "[ $duration ]($style bg:color5)"
+style = "bold bg:color5 fg:foreground"
+min_time = 0
+show_milliseconds = true
+
+[character]
+disabled = false
+success_symbol = "[  ](bold fg:foreground)"
+error_symbol = "[  ](bold fg:foreground)"
+vimcmd_symbol = "[  ](bold fg:foreground)"

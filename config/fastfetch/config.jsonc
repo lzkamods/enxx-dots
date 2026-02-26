@@ -1,0 +1,61 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  "logo": {
+	  "source":"/home/lzka/.config/fastfetch/logo4.jpg",
+	  "type": "auto",
+	  "height": 15,
+	  "padding": {
+		  "top": 2,
+		  "left": 2
+	  }
+  },
+  "display": {
+    "separator": " "
+  },
+  "modules": [
+    "title",
+    "break",
+    {
+	"type": "os",
+	"key": " "
+    },
+    {
+	"type": "wm",
+	"key": "󱂬 "
+    },
+    {
+	"type": "uptime",
+	"key": " "
+    },
+    {
+	"type": "custom",
+	"key": "                        "
+    },
+    {
+	"type": "cpu",
+	"key": " "
+    },
+    {
+	"type": "gpu",
+	"key": "󰢮 "
+    },
+    {
+	"type": "memory",
+	"key": " "
+    },
+    {
+	"type": "disk",
+	"key": " "
+    },
+    {
+	"type": "localip",
+	"key": "󰌗 "
+    },
+    {
+	"type": "custom",
+	"key": "                        "
+    },
+    "break",
+    "colors"
+  ]
+}
