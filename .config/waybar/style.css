@@ -1,0 +1,56 @@
+/* global */
+@import url("/home/lzka/.cache/wal/colors-waybar.css");
+*{
+	font-family: 'FontAwesome, GoogleSans';
+	font-weight: bold;
+	font-size: 15px;
+	padding: 0px;
+    color: @foreground;
+}
+
+window{ background-color: alpha(@background, 0.95); }
+
+tooltip, tooltip label {
+    background-color: @background;
+    border: none;
+    border-radius: 15px;
+    padding: 0 5px;
+}
+
+/* left */
+#window { margin: 0 20 0 10px; }
+
+/* center */
+#wrkpanel{
+    margin: 5 0px;
+    border-radius: 50px;
+    background-color: alpha(@color4, 0.3);
+}
+
+#workspaces {
+    background-color: alpha(@color2, 0.2);
+    margin: 0 20 0 0px;
+    border-radius: 50px;
+}
+
+#workspaces button {
+    border-radius: 100px;
+    padding: 0px 4px;
+    transition: all 0.25s ease-in-out;
+}
+
+#workspaces button.active{ background-color: @color2; }
+
+#cpu, #memory{
+	color: @color12;
+	padding: 0 10 0 0;
+}
+
+/* right */
+#clock.def { padding: 0 10 0 5; }
+
+#clock.date { padding: 0 0 0 15; }
+
+#network, #bluetooth, #pulseaudio, #language{ padding: 0 0 0 10; }
+
+#tray { padding: 0 15 0 0; }
