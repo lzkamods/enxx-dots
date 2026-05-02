@@ -1,0 +1,41 @@
+configuration {
+        location: 0;
+        margin-top: 100px;
+	display-emoji: " ";
+  timeout {
+      action: "kb-cancel";
+      delay:  0;
+  }
+}
+@import "/home/lzka/.cache/wal/colors-rofi-dark.rasi"
+entry {
+        corsor-width: 8px;
+        placeholder: "search...";
+}
+element {
+    border-radius: 10px;
+    orientation: vertical;
+    children: [element-text];
+    background-color: transparent;
+    vertical-align: 0.5;
+}
+
+element-text {
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+    font-size: 50px;
+    background-color: transparent;
+    text-color: inherit;
+    padding: 10px;
+
+}
+window{
+        width: 20%;
+        height:47%;
+        border-radius: 13px;
+}
+listview {
+        columns: 5;
+        lines: 5;
+        margin:5 0 0 0px;
+}

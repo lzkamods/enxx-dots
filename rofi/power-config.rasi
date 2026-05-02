@@ -1,0 +1,46 @@
+configuration {
+        modes: "Power:~/.config/rofi/test1.sh";
+        font: "GoogleSans SemiBold 15";	
+        show-icons: false;
+        location: 0;
+	margin-top: 100px;
+  timeout {
+      action: "kb-cancel";
+      delay:  0;
+  }
+}
+@import "/home/lzka/.cache/wal/colors-rofi-dark.rasi"
+inputbar {
+	enabled: false;
+}
+entry {
+	enabled: false;
+}
+element {
+    border-radius: 8px;
+    orientation: vertical;
+    children: [element-text];
+    background-color: transparent;
+    vertical-align: 0.5;
+}
+
+element-text {
+    expand: true;
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+    font-size: 50px;
+    background-color: transparent; 
+    text-color: inherit;
+    padding: 25px;
+
+}
+window{
+        width: 17%;
+        height:15%;
+        border-radius: 13px;
+}
+listview {
+        columns: 3;
+	lines: 1;
+        margin:5 0 0 0px;
+}
